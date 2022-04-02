@@ -1,10 +1,10 @@
 import './App.css';
-import { Feedback } from './components/Feedback';
+import  FeedbackNew  from './components/Feedback';
 
 function App() {
   return (
     <div className="App">
-      <Feedback/>
+      <FeedbackNew/>
     </div>
   );
 }

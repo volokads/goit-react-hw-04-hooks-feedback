@@ -1,24 +1,12 @@
-import s from './FeedbackOption.module.css'
-function FeedbackOptions({ options, onLeaveFeedback }) {
+// import s from './FeedbackOption.module.css'
+function FeedbackOptions({buttons, onLeaveFeedback }) {
     return (
-        <>
-            <ul>
-                {Object.keys(options).map(key => {
-                    return (
-                        <li className={s.list} key={key}>
-                            <button
-                                name={key}
-                                onClick={onLeaveFeedback}
-                                type="button">
-                                {key}
-                            </button>
-                        </li>
-                    )
-                })}
-            </ul>
-        </>
+        <div>
+            {Object.keys(buttons).map((button, index) => ( 
+            <button key={index} onClick={onLeaveFeedback} name={button}>{button}</button>
+            ))}
+        </div>
     )
-    
 }
 
 export { FeedbackOptions}
